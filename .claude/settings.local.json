@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Recurse \"c:\\\\Users\\\\mnaffeti.ACTIA\\\\Desktop\\\\PassINI\\\\src\")",
+      "Bash(Select-Object FullName)",
+      "Bash(Format-Table -HideTableHeaders)",
+      "Bash(npm install *)",
+      "PowerShell($env:npm_config_cache = \"C:\\\\Users\\\\mnaffeti.ACTIA\\\\AppData\\\\Local\\\\npm-cache\"; cd \"c:\\\\Users\\\\mnaffeti.ACTIA\\\\Desktop\\\\PassINI\"; npm install 2>&1 | Select-Object -Last 15)"
+    ]
+  }
+}

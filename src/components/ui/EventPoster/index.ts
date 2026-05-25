@@ -1,0 +1,1 @@
+export { EventPoster } from './EventPoster';
