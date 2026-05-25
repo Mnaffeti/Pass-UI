@@ -43,7 +43,7 @@ export function Header({
         background: 'rgba(255,255,255,0.96)',
         backdropFilter: 'saturate(180%) blur(10px)',
         borderBottom: '1px solid var(--hairline)',
-        transition: 'all .25s ease',
+        transition: 'background .25s ease, border-color .25s ease',
       }}
     >
       <div

@@ -39,7 +39,16 @@ export function App() {
   }, [tweaks.sportsTheme, tweaks.festivalsTheme]);
 
   useEffect(() => {
-    const onScroll = () => dispatch({ type: 'SET_SCROLLED', payload: window.scrollY > 140 });
+    let isScrolled = window.scrollY > 200;
+    dispatch({ type: 'SET_SCROLLED', payload: isScrolled });
+    const onScroll = () => {
+      const y = window.scrollY;
+      const next = isScrolled ? y > 80 : y > 200;
+      if (next !== isScrolled) {
+        isScrolled = next;
+        dispatch({ type: 'SET_SCROLLED', payload: next });
+      }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
   }, [dispatch]);
